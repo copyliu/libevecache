@@ -31,3 +31,5 @@ _ReSharper*/
 *.exp
 *.dll
 *.dblite
+*.os
+*.a
