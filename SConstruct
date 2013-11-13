@@ -11,6 +11,8 @@ platform = ARGUMENTS.get('OS', Platform())
 
 
 if platform.name == "win32":
+   env = Environment(TARGET_ARCH="x86", CPPPATH = ['lib/'], MSVC_VERSION='10.0')
+   lenv = Environment(TARGET_ARCH="x86", CPPPATH = ['lib/'], MSVC_VERSION='10.0')
    lenv.Append(CPPFLAGS=["/EHsc", "/MD", "/O2", "/GF", "/GR"])
    pyenv.Append(CPPFLAGS=["/EHsc", "/MD", "/O2", "/GF", "/GR"])
    env.Append(CPPFLAGS=["/EHsc", "/MD", "/O2", "/GF", "/GR"])
